@@ -13,7 +13,7 @@ theta = [0.0] * n
 omega.insert(0,0.0)
 theta.insert(0,math.pi / 6)
 for i in range(0, n):
-    omega[i+1] = omega[i] - (g / l * math.sin(theta[i]) * dt - q * omega[i] * dt)
+    omega[i+1] = omega[i] - (g / l * math.sin(theta[i]) * dt + q * omega[i] * dt)
     theta[i+1] = theta[i] + omega[i+1] * dt
     time[i+1] = time[i] + dt
 
